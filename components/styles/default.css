@@ -59,7 +59,8 @@ h1 {
 .content-wrapper {
   display: flex;
   gap: 20px;
-  align-items: flex-start;
+  align-items: stretch;
+  min-height: 60vh;
 }
 
 .text-column {
@@ -74,5 +75,7 @@ h1 {
 }
 
 .image-column img {
-  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
