@@ -13,7 +13,7 @@ main {
   flex: 1;
   border-radius: 20px;
   max-width: none;
-  margin: 15px 10px;
+  margin: 15px 20px;
   text-align: left;
 }
 
@@ -50,9 +50,34 @@ footer {
   color: #f4edea;
   padding: 25px 32px;
   text-align: center;
-  width: 100%;
 }
 
 h1 {
   display: inline;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.text-column {
+  flex: 2;
+}
+
+.image-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-column img {
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
 }
