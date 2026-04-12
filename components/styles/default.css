@@ -1,3 +1,4 @@
+/* Global Styles */
 *,
 *::before,
 *::after {
@@ -54,6 +55,13 @@ h1 {
   display: inline;
 }
 
+img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* Container for Default Page Layout */
 .content-wrapper {
   display: flex;
   gap: 5px;
@@ -61,10 +69,12 @@ h1 {
   min-height: 70vh;
 }
 
+/* The Two Columns for the Default Page Layout */
 .text-column {
   flex: 2;
 }
 
+/* The Image Column for the Default Page Layout */
 .image-column {
   flex: 1;
   display: flex;
@@ -72,9 +82,108 @@ h1 {
   align-items: center;
 }
 
+/* How Images are Styled in the Image Column */
 .image-column img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
   display: block;
+}
+
+/* Grid Container for Content Page */
+.container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* The Sections for each part of the Content */
+.container section {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* How Images are Styled */
+.container-section-img {
+  max-width: 80px;
+  height: auto;
+  margin-top: 15px;
+  order: 3;
+}
+
+/* Top Row: 3 Items, Spans 2 Columns Each*/
+#youtube,
+#twitch,
+#shorts {
+  grid-column: span 2;
+}
+
+/* Bottom Row: 2 Items, Spans 3 Columns Each */
+#music,
+#discord {
+  grid-column: span 3;
+}
+
+/* Latest Video Container*/
+#latest-video-container {
+  order: 2;
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.thumb-container {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  overflow: hidden;
+  border-radius: 12px;
+  line-height: 0;
+}
+
+.thumb-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 40px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.thumb-container:hover .play-overlay {
+  opacity: 1;
+}
+
+.thumb-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Shorts Container, makes the images side by side for content shorts section*/
+.shorts-container {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  order: 3;
 }
