@@ -58,7 +58,7 @@ h1 {
 
 .content-wrapper {
   display: flex;
-  gap: 20px;
+
   align-items: stretch;
   min-height: 70vh;
 }
