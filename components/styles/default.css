@@ -60,7 +60,7 @@ h1 {
   display: flex;
   gap: 20px;
   align-items: stretch;
-  min-height: 60vh;
+  min-height: 70vh;
 }
 
 .text-column {
@@ -78,4 +78,5 @@ h1 {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+  display: block;
 }
