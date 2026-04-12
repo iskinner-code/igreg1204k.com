@@ -101,6 +101,7 @@ img {
 /* The Sections for each part of the Content */
 .container section {
   background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
   border-radius: 15px;
   text-align: center;
   display: flex;
@@ -183,6 +184,6 @@ img {
 .shorts-container {
   display: flex;
   justify-content: center;
-  margin-top: auto;
+
   order: 3;
 }
