@@ -101,7 +101,6 @@ img {
 /* The Sections for each part of the Content */
 .container section {
   background-color: rgba(255, 255, 255, 0.05);
-  padding: 20px;
   border-radius: 15px;
   text-align: center;
   display: flex;
@@ -114,7 +113,7 @@ img {
 .container-section-img {
   max-width: 80px;
   height: auto;
-  margin-top: 15px;
+  margin-top: 5px;
   order: 3;
 }
 
