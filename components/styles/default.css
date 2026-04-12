@@ -70,14 +70,9 @@ h1 {
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .image-column img {
-  border-radius: 10px;
-}
-
-@media (max-width: 800px) {
-  .content-wrapper {
-    flex-direction: column;
-  }
+  border-radius: 5px;
 }
