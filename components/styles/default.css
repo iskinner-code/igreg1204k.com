@@ -92,6 +92,8 @@ img {
   flex: 1;
   display: flex;
   justify-content: center;
+  display: block;
+  text-align: center;
   align-items: center;
 }
 
