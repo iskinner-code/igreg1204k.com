@@ -79,7 +79,7 @@ img {
 .content-wrapper {
   display: flex;
   gap: 15px;
-  align-items: stretch;
+  align-items: flex-start;
   min-height: 70vh;
 }
 
@@ -92,10 +92,9 @@ img {
 .image-column {
   flex: 1;
   display: flex;
-  justify-content: center;
-  display: block;
-  text-align: center;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 /* How Images are Styled in the Image Column */
@@ -104,6 +103,11 @@ img {
   height: auto;
   border-radius: 10px;
   display: block;
+}
+
+.image-column figcaption {
+  margin-top: 15px;
+  font-weight: bold;
 }
 
 /* Grid Container for Content Page */
@@ -207,38 +211,29 @@ img {
 .slideshow {
   position: relative;
   width: 100%;
-  max-width: 500px;
-  height: 320px;
+  max-width: 400px;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   border-radius: 10px;
 }
 
 .slide {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   opacity: 0;
-  transform: scale(1.05);
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  transform: scale(1.1);
+  transition:
+    opacity 1s ease-in-out,
+    transform 1s ease-in-out;
+  margin: 0;
 }
 
-.slide {
+.slide-active {
   opacity: 1;
   transform: scale(1);
+  z-index: 1;
 }
-
-/* Extra small devices (phones, 600px and down)
-@media only screen and (max-width: 600px) {...}
-
-/* Small devices (portrait tablets and large phones, 600px and up)
-@media only screen and (min-width: 600px) {...}
-
-/* Medium devices (landscape tablets, 768px and up) 
-@media only screen and (min-width: 768px) {...}
-
-/* Large devices (laptops/desktops, 992px and up) 
-@media only screen and (min-width: 992px) {...}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) 
-@media only screen and (min-width: 1200px) {...}

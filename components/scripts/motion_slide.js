@@ -1,16 +1,18 @@
-const slides = document.querySelectorAll(".slide");
-let currentIndex = 0;
+function startSlideshow() {
+  const slides = document.querySelectorAll(".slide");
 
-function showNextSlide() {
-  // Remove active from current
-  slides[currentIndex].classList.remove("active");
+  if (slides.length === 0) return;
 
-  // Move to next
-  currentIndex = (currentIndex + 1) % slides.length;
+  let currentIndex = 0;
 
-  // Add active to next
-  slides[currentIndex].classList.add("active");
+  setInterval(() => {
+    slides[currentIndex].classList.remove("slide-active");
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add("slide-active");
+  }, 4000);
 }
 
-// Change slide every 4 seconds
-setInterval(showNextSlide, 4000);
+window.addEventListener("load", () => {
+  // small delay ensures includes finish injecting DOM
+  setTimeout(startSlideshow, 100);
+});
