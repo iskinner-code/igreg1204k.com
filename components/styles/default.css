@@ -19,7 +19,7 @@ main {
 }
 
 body {
-  background-color: #040348;
+  background-color: #036cc1;
   color: #f4edea;
   min-height: 100vh;
   display: flex;
@@ -48,7 +48,7 @@ nav a {
 
 header,
 footer {
-  background-color: #191716;
+  background-color: #0a1f44;
   padding: 25px 32px;
   text-align: center;
 }
